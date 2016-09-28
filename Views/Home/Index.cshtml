@@ -1,0 +1,20 @@
+﻿
+
+@Html.ActionLink("Back home", "Index")
+
+@model DotaAPI.Models.Match
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.MatchId)
+    @Html.TextBoxFor(model => model.MatchId)
+    <input type="submit" value="Add new Match" />
+}
+
+
+<h2>Match Info</h2>
+
+<hr />
+
+<p>@Model.Radiant_win</p>
+<p>@Model.Duration</p>
